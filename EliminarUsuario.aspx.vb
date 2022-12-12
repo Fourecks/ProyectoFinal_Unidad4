@@ -16,6 +16,7 @@
             'Mostrar los datos con ayuda de un ciclo for
             For i = 0 To dt.Rows.Count - 1
                 txtNombre.Text = dt.Rows(i).Item("nombre")
+                txtClave.Text = dt.Rows(i).Item("clave")
             Next
 
         End If
@@ -50,5 +51,6 @@
         Response.Redirect("Usuario.aspx")
 
     End Sub
+
 
 End Class

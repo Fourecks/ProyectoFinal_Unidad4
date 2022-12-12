@@ -16,6 +16,8 @@
             'Mostrar los datos con ayuda de un ciclo for
             For i = 0 To dt.Rows.Count - 1
                 txtNombre.Text = dt.Rows(i).Item("nombre")
+                txtClave.Text = dt.Rows(i).Item("clave")
+                ListBox1.Text = dt.Rows(i).Item("nivel")
             Next
         End If
 
@@ -31,6 +33,7 @@
             'Usuario.IdeUsuario = TxtId.Text
             usuario.nomUsuario = txtNombre.Text
             usuario.clavUsuario = txtClave.Text
+            usuario.nivUsuario = ListBox1.Text
 
             'llamada metodo guardar registro
             usuario.editar()
@@ -39,6 +42,7 @@
             'Puede omitirse ya que el redireccionamiento es automático
             txtNombre.Text = ""
             txtClave.Text = ""
+            ListBox1.Text = ""
 
             'Redireccionamos de nuevo a la página listado Usuarios
             Response.Redirect("Usuario.aspx")
@@ -47,6 +51,7 @@
             'Puede omitirse ya que el redireccionamiento es automático
             txtNombre.Text = ""
             txtClave.Text = ""
+            ListBox1.Text = ""
         End If
 
     End Sub

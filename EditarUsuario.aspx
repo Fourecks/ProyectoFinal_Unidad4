@@ -38,6 +38,26 @@
             </td>
         </tr>
         <tr>
+            <td class="text-right" style="width: 114px">Nivel</td>
+            <td style="width: 33px; height: 20px;"></td>
+            <td style="width: 561px; height: 20px;">
+                <asp:ListBox ID="ListBox1" runat="server">
+                    <asp:ListItem>1</asp:ListItem>
+                    <asp:ListItem>2</asp:ListItem>
+                    <asp:ListItem>3</asp:ListItem>
+                    <asp:ListItem>4</asp:ListItem>
+                    <asp:ListItem>5</asp:ListItem>
+                </asp:ListBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right" style="width: 114px; height: 20px;"></td>
+            <td style="width: 33px; height: 20px;"></td>
+            <td style="width: 561px; height: 20px;">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtClave" ErrorMessage="Elija el nivel del usuario"></asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
             <td class="text-right" style="width: 114px">&nbsp;</td>
             <td style="width: 33px">&nbsp;</td>
             <td style="width: 561px">&nbsp;</td>

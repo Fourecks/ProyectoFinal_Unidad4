@@ -59,7 +59,7 @@ Public Class Usuario
             'cadena de conexión
             .Connection = c.strcon
             'consulta de la tabla usuarios
-            .CommandText = "SELECT idusuario, nombre, clave FROM usuario"
+            .CommandText = "SELECT idusuario, nombre, clave, nivel FROM usuario"
         End With
         c.da.SelectCommand = c.cmd
         c.da.Fill(c.dt)

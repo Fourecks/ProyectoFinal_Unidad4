@@ -19,6 +19,13 @@
             </td>
         </tr>
         <tr>
+            <td class="text-right" style="width: 114px">Clave</td>
+            <td style="width: 33px">&nbsp;</td>
+            <td style="width: 561px">
+                <asp:TextBox ID="txtClave" runat="server" Width="258px" TextMode="Password"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
             <td class="text-right" style="width: 114px">&nbsp;</td>
             <td style="width: 33px">&nbsp;</td>
             <td style="width: 561px">&nbsp;</td>
