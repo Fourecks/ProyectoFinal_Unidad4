@@ -26,6 +26,7 @@
             html.Append("<tr>")
             html.Append("<th>Usuario</th>")
             html.Append("<th>Clave</th>")
+            html.Append("<th>Nivel</th>")
             html.Append("<th cols=3>Acciones</th>")
             html.Append("</tr>")
             html.Append("</thead>")

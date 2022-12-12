@@ -28,7 +28,7 @@
             <td class="text-left" style="width: 114px">Clave</td>
             <td style="width: 33px">&nbsp;</td>
             <td style="width: 561px">
-                <asp:TextBox ID="Txtclave" runat="server" TextMode="Password" Width="258px"></asp:TextBox>
+                <asp:TextBox ID="txtClave" runat="server" TextMode="Password" Width="258px"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -36,6 +36,26 @@
             <td style="width: 33px">&nbsp;</td>
             <td style="width: 561px">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Ingrese la clave de usuario" ControlToValidate="Txtclave"></asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
+            <td class="text-left" style="width: 114px">Nivel</td>
+            <td style="width: 33px">&nbsp;</td>
+            <td style="width: 561px">
+                <asp:ListBox ID="ListBox1" runat="server">
+                    <asp:ListItem>1</asp:ListItem>
+                    <asp:ListItem>2</asp:ListItem>
+                    <asp:ListItem>3</asp:ListItem>
+                    <asp:ListItem>4</asp:ListItem>
+                    <asp:ListItem>5</asp:ListItem>
+                </asp:ListBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right" style="width: 114px">&nbsp;</td>
+            <td style="width: 33px">&nbsp;</td>
+            <td style="width: 561px">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Elija el nivel del usuario" ControlToValidate="ListBox1"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>

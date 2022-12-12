@@ -7,7 +7,7 @@
 
     End Sub
 
-    Protected Sub TxtApellido_TextChanged(sender As Object, e As EventArgs) Handles Txtclave.TextChanged
+    Protected Sub TxtApellido_TextChanged(sender As Object, e As EventArgs) Handles txtClave.TextChanged
 
 
     End Sub
@@ -29,7 +29,8 @@
         If testmsg = 1 Then
             'Usuario.IdUsuario = TxtId.Text
             usuario.nomUsuario = txtNombre.Text
-            usuario.clavUsuario = Txtclave.Text
+            usuario.clavUsuario = txtClave.Text
+            usuario.nivUsuario = ListBox1.Text
 
             'llamada metodo guardar registro
             usuario.guardar()
@@ -37,7 +38,8 @@
             'Dejamos los campos vacíos para un nuevo ingreso de datos
             'Puede omitirse ya que el redireccionamiento es automático
             txtNombre.Text = ""
-            Txtclave.Text = ""
+            txtClave.Text = ""
+            ListBox1.Text = ""
 
             'Después de guardar volvemos a listado Usuarios
             'Redireccionamos de nuevo a la página listado Usuarios
@@ -46,11 +48,11 @@
             'En el caso seleccione que no quiere agregar registro
             'Campos del Formulario quedan vacíos de nuevo
             txtNombre.Text = ""
-            Txtclave.Text = ""
+            txtClave.Text = ""
+            ListBox1.Text = ""
         End If
 
     End Sub
-
 
 
 End Class
