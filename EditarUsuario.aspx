@@ -27,14 +27,14 @@
             <td class="text-right" style="width: 114px">Clave</td>
             <td style="width: 33px; height: 20px;"></td>
             <td style="width: 561px; height: 20px;">
-                <asp:TextBox ID="txtNombre0" runat="server" Width="258px" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="txtClave" runat="server" Width="258px" TextMode="Password"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="text-right" style="width: 114px; height: 20px;"></td>
             <td style="width: 33px; height: 20px;"></td>
             <td style="width: 561px; height: 20px;">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtNombre" ErrorMessage="Ingrese la clave de usuario"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtClave" ErrorMessage="Ingrese la clave de usuario"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>

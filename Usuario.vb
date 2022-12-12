@@ -5,11 +5,22 @@ Public Class Usuario
     'Instancia de la conexion
     Dim c As New conexion
 
+    Private Id As String
     Private nombreUsuario As String
     Private claveUsuario As String
+    Private nivelUsuario As String
     Private pagina As Materia
 
     'Metodos de la propiedad
+    Public Property idUsuario() As String
+        Get
+            Return Id
+
+        End Get
+        Set(value As String)
+            Id = value
+        End Set
+    End Property
     Public Property nomUsuario() As String
         Get
             Return nombreUsuario
@@ -28,6 +39,15 @@ Public Class Usuario
             claveUsuario = value
         End Set
     End Property
+    Public Property nivUsuario() As String
+        Get
+            Return nivelUsuario
+
+        End Get
+        Set(value As String)
+            nivelUsuario = value
+        End Set
+    End Property
 
 
 
@@ -39,8 +59,9 @@ Public Class Usuario
             'cadena de conexión
             .Connection = c.strcon
             'consulta de la tabla usuarios
-            .CommandText = "SELECT nomusuario, clavusuario FROM usuario"
+            .CommandText = "SELECT idusuario, nombre, clave FROM usuario"
         End With
+        c.da.SelectCommand = c.cmd
         c.da.Fill(c.dt)
         Return c.dt
     End Function
@@ -52,7 +73,7 @@ Public Class Usuario
             c.strcon.Open()
             With c.cmd
                 .Connection = c.strcon
-                .CommandText = "INSERT INTO Materia values ('""','" & nomUsuario & "','" & clavUsuario & "')"
+                .CommandText = "INSERT INTO usuario values ('""','" & idUsuario & "','" & nomUsuario & "','" & clavUsuario & "', '" & nivUsuario & "')"
                 c.result = c.cmd.ExecuteNonQuery
             End With
             If c.result = 0 Then
@@ -74,7 +95,7 @@ Public Class Usuario
         c.strcon.Open()
         With c.cmd
             .Connection = c.strcon
-            .CommandText = "SELECT nomUsuario,clavUsuario FROM materia where nommateria = '" & nomUsuario & "' "
+            .CommandText = "SELECT idUsuario,nombre,clave,nivel FROM usuario where idusuario = '" & nomUsuario & "' "
             c.result = c.cmd.ExecuteNonQuery
         End With
         c.da.SelectCommand = c.cmd
@@ -120,7 +141,7 @@ Public Class Usuario
                 'cadena de conexión
                 .Connection = c.strcon
                 'consulta de la tabla usuario
-                .CommandText = "DELETE FROM materia where nomUsuario = '" & nomUsuario & "' "
+                .CommandText = "DELETE FROM usuario where idUsuario = '" & idUsuario & "' "
                 c.result = c.cmd.ExecuteNonQuery
             End With
 

@@ -11,6 +11,6 @@
     <asp:Button ID="Button1" runat="server" Text="Agregar" Width="123px" />
 </p>
 <p>
-    <asp:placeholder id="usuario" runat="server" />
+    <asp:placeholder id="usuarios" runat="server" />
 </p>
 </asp:Content>

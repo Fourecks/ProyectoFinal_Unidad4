@@ -11,9 +11,9 @@
         'variable para evaluar la respuesta del usuario
         Dim testmsg As Integer
 
-        testmsg = MsgBox("Está seguro que desea guardar registro", 1, "Registro Alumno")
+        testmsg = MsgBox("Está seguro que desea guardar registro", 1, "Registro Materia")
         If testmsg = 1 Then
-            'alumno.ideAlumno = TxtId.Text
+            'Materia.nomMateria = TxtId.Text
             materia.nomMateria = txtNombre.Text
 
             'llamada metodo guardar registro
@@ -24,8 +24,8 @@
             txtNombre.Text = ""
 
 
-            'Después de guardar volvemos a listado Alumnos
-            'Redireccionamos de nuevo a la página listado Alumnos
+            'Después de guardar volvemos a listado Materias
+            'Redireccionamos de nuevo a la página listado Materias
             Response.Redirect("Materia.aspx")
         Else
             'En el caso seleccione que no quiere agregar registro

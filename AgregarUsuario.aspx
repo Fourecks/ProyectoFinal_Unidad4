@@ -21,7 +21,7 @@
             <td class="text-right" style="width: 114px">&nbsp;</td>
             <td style="width: 33px">&nbsp;</td>
             <td style="width: 561px">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Ingrese nombre de usuario"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Ingrese nombre de usuario" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -35,7 +35,7 @@
             <td class="text-right" style="width: 114px">&nbsp;</td>
             <td style="width: 33px">&nbsp;</td>
             <td style="width: 561px">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Ingrese la clave de usuario"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Ingrese la clave de usuario" ControlToValidate="Txtclave"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>

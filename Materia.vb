@@ -59,7 +59,7 @@ Public Class Materia
             'cadena de conexión
             .Connection = c.strcon
             'consulta de la tabla estudiante
-            .CommandText = "SELECT idmateria,materia,idcarrera,uv FROM materia"
+            .CommandText = "SELECT idmateria,materia,idcarrera FROM materia"
         End With
         c.da.SelectCommand = c.cmd
         c.da.Fill(c.dt)

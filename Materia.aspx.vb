@@ -6,15 +6,15 @@
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Me.IsPostBack Then
 
-            ''llenado de DataTable para mostrar listado de estudiantes
+            ''llenado de DataTable para mostrar listado de Materias
             Dim dt As DataTable = materia.listarRegistros()
 
             'Crear variable String para html
             Dim html As New StringBuilder()
 
-            'Enlace para agregar nuevo Alumno
+            'Enlace para agregar nueva Materia
 
-            '<a href = AgregarAlumno.aspx > Agregar</a>
+            '<a href = AgregarMateria.aspx > Agregar</a>
 
             'Creando HTML para mostrar en forma tabla
             html.Append("<thead>")
