@@ -15,7 +15,7 @@ Public Class EditarAlumno
 
             'Mostrar los datos con ayuda de un ciclo for
             For i = 0 To dt.Rows.Count - 1
-                TxtId.Text = dt.Rows(i).Item("idestudiante")
+                TxtId.Text = dt.Rows(i).Item("idalumno")
                 txtNombre.Text = dt.Rows(i).Item("nombre")
                 TxtApellido.Text = dt.Rows(i).Item("apellido")
                 TxtCorreo.Text = dt.Rows(i).Item("correo")
