@@ -115,7 +115,8 @@ Public Class Usuario
                 .Connection = c.strcon
                 .CommandText = "UPDATE usuario SET 
                                 nombre ='" & nomUsuario & "',
-                                clave ='" & clavUsuario & "')"
+                                clave ='" & clavUsuario & "'
+                                clave ='" & nivUsuario & "')"
 
                 c.result = c.cmd.ExecuteNonQuery
             End With
