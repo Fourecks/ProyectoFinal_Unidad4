@@ -16,12 +16,18 @@ Public Class Alumno1
             'Agregando encabezado a tabla
             html.Append("<thead>")
             html.Append("<tr>")
-            html.Append("<th>Codigo</th>")
+            html.Append("<th>Id</th>")
             html.Append("<th>Nombre</th>")
             html.Append("<th>Apellido</th>")
+            html.Append("<th>Correo</th>")
+            html.Append("<th>Telefono</th>")
+            html.Append("<th>Código</th>")
+            html.Append("<th cols=3>Acciones</th>")
             html.Append("</tr>")
             html.Append("</thead>")
+
             html.Append("<tbody>")
+
 
             'Mostrar datos en filas
             For i = 0 To dt.Rows.Count - 1
@@ -34,7 +40,26 @@ Public Class Alumno1
                 html.Append("</td><td>")
                 html.Append(dt.Rows(i).Item("apellido"))
                 html.Append("</td>")
+                html.Append("<td>")
+                html.Append(dt.Rows(i).Item("correo"))
+                html.Append("</td>")
+                html.Append("<td>")
+                html.Append(dt.Rows(i).Item("telefono"))
+                html.Append("</td>")
+                html.Append("<td>")
+                html.Append(dt.Rows(i).Item("codigo"))
+                html.Append("</td>")
+
+                'Columnas para Agregar, Editar,Eliminar
+                html.Append("<td>")
+                html.Append("<a href = 'EditarAlumno.aspx?Alumno=" & codigo & "' dt.Rows(i).Item('codigo') >Editar</a>")
+                html.Append("</td>")
+                html.Append("<td>")
+                html.Append("<a href = 'EliminarAlumno.aspx?Alumno=" & codigo & "' dt.Rows(i).Item('codigo') >Eliminar</a>")
+                html.Append("</td>")
+
                 html.Append("</tr>")
+
             Next
 
             html.Append("</tbody>")
