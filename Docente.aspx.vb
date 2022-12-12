@@ -20,8 +20,13 @@ Public Class Docente1
             html.Append("<th>Codigo</th>")
             html.Append("<th>Nombre</th>")
             html.Append("<th>Apellido</th>")
+            html.Append("<th>Correo</th>")
+            html.Append("<th>Telefono</th>")
+            html.Append("<th>Código</th>")
+            html.Append("<th cols=3>Acciones</th>")
             html.Append("</tr>")
             html.Append("</thead>")
+
             html.Append("<tbody>")
 
             'Mostrar datos en filas
@@ -35,6 +40,24 @@ Public Class Docente1
                 html.Append("</td><td>")
                 html.Append(dt.Rows(i).Item("apellidodocente"))
                 html.Append("</td>")
+                html.Append("<td>")
+                html.Append(dt.Rows(i).Item("correodocente"))
+                html.Append("</td>")
+                html.Append("<td>")
+                html.Append(dt.Rows(i).Item("telefonodocente"))
+                html.Append("</td>")
+                html.Append("<td>")
+                html.Append(dt.Rows(i).Item("codigodocente"))
+                html.Append("</td>")
+
+                'Columnas para Agregar, Editar,Eliminar
+                html.Append("<td>")
+                html.Append("<a href = 'EditarDocente.aspx?Docente=" & codigo & "' dt.Rows(i).Item('codigo') >Editar</a>")
+                html.Append("</td>")
+                html.Append("<td>")
+                html.Append("<a href = 'EliminarDocente.aspx?Docente=" & codigo & "' dt.Rows(i).Item('codigo') >Eliminar</a>")
+                html.Append("</td>")
+
                 html.Append("</tr>")
             Next
 
