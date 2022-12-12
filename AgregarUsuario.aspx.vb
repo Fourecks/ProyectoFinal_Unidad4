@@ -5,4 +5,7 @@
 
     End Sub
 
+    Protected Sub TxtApellido_TextChanged(sender As Object, e As EventArgs) Handles Txtclave.TextChanged
+
+    End Sub
 End Class
